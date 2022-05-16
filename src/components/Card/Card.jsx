@@ -3,9 +3,9 @@ import React from "react";
 export default function Card(props) {
   return (
     <div className="card">
-      <p>Question: </p>
+      <p>Prompt: {props.result.prompt} </p>
       <br />
-      <p>Response:</p>
+      <p>Response: {props.result.response} </p>
     </div>
   );
 }

@@ -1,15 +1,21 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Card from "./components/Card/Card";
 import Form from "./components/Form/Form";
 import "./App.css";
-const { Configuration, OpenAIApi } = require("openai");
 
 function App() {
+  const [results, setResults] = useState([]);
+
+  const setResultInState = (incomingResult) => {
+    setResults([...results, incomingResult]);
+  };
   return (
     <div className="App">
       <header className="App-header">The Sneaky Robot</header>
-      <Form />
-      <Card />
+      <Form setResultInState={setResultInState} />
+      {results.map((result, index) => {
+        return <Card result={result} />;
+      })}
     </div>
   );
 }

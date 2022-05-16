@@ -22,7 +22,8 @@ export default function Form(props) {
         stop: [";"],
       })
       .then((response) => {
-        console.log(response);
+        let result = { prompt: ama, response: response.data.choices[0].text };
+        props.setResultInState(result);
       });
   }
 
