@@ -13,9 +13,12 @@ function App() {
     <div className="App">
       <header className="App-header">The Sneaky Robot</header>
       <Form setResultInState={setResultInState} />
-      {results.map((result, index) => {
-        return <Card result={result} />;
-      })}
+      {results
+        .slice()
+        .reverse()
+        .map((result) => {
+          return <Card result={result} />;
+        })}
     </div>
   );
 }
