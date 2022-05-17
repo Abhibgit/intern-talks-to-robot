@@ -3,7 +3,7 @@ const { Configuration, OpenAIApi } = require("openai");
 
 export default function Form(props) {
   const configuration = new Configuration({
-    apiKey: "",
+    apiKey: process.env.REACT_APP_OPENAI_KEY,
   });
   const openai = new OpenAIApi(configuration);
   let ama = "";
