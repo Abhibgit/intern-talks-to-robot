@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">The Sneaky Robot</header>
+      <br />
       <Form setResultInState={setResultInState} />
       {results
         .slice()

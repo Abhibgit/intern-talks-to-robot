@@ -1,4 +1,6 @@
 import React from "react";
+import "./Form.css";
+import ReactTooltip from "react-tooltip";
 const { Configuration, OpenAIApi } = require("openai");
 
 export default function Form(props) {
@@ -32,12 +34,24 @@ export default function Form(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Ask Astro Boy:
-        <input type="text" name="ama" onChange={handleChange} />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+    <div className="form-div" background-color="darkslategray">
+      <form onSubmit={handleSubmit}>
+        <label className="form-label">Ask Astro Boy:</label>
+        <input
+          className="form-input"
+          type="text"
+          name="ama"
+          data-tip
+          data-for="promptTip"
+          onChange={handleChange}
+        />
+        <ReactTooltip id="promptTip" place="top" effect="solid">
+          Enter a prompt like "Dogs are loyal animals."
+        </ReactTooltip>
+        <button className="form-button" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }
