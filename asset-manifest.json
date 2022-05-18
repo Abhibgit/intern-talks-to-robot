@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/intern-talks-to-robot/static/css/main.a0d1746e.css",
+    "main.js": "/intern-talks-to-robot/static/js/main.062e13d7.js",
+    "static/js/787.ea86b839.chunk.js": "/intern-talks-to-robot/static/js/787.ea86b839.chunk.js",
+    "index.html": "/intern-talks-to-robot/index.html",
+    "main.a0d1746e.css.map": "/intern-talks-to-robot/static/css/main.a0d1746e.css.map",
+    "main.062e13d7.js.map": "/intern-talks-to-robot/static/js/main.062e13d7.js.map",
+    "787.ea86b839.chunk.js.map": "/intern-talks-to-robot/static/js/787.ea86b839.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0d1746e.css",
+    "static/js/main.062e13d7.js"
+  ]
+}
